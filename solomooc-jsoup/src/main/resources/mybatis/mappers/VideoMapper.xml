@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.solomooc.jsoup.mapper.VideoMapper">
+
+    <insert id="saveVideo">
+        insert into fnd_video_class(class_name, created, updated)
+        values(#{className},#{created},#{updated})
+    </insert>
+
+    <insert id="saveModule">
+        insert into fnd_video_module
+        (module_name,class_id,intro,image,price,score,buyed,earn,module_status,heat,created,updated )
+        values
+        (#{moduleName},#{classId},#{intro},#{image},#{price},#{score},#{buyed},#{earn},#{moduleStatus},#{heat},#{created},#{updated} )
+    </insert>
+
+
+</mapper>

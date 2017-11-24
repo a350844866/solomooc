@@ -15,7 +15,7 @@
         <property name="minIdle" value="${redis.minIdle}"/>
     </bean>
 
-    <bean id="jedisCluster" class="com.jt.common.util.RedisCluster">
+    <bean id="jedisCluster" class="com.solomooc.common.util.RedisCluster">
         <property name="addressConfig">
             <value>classpath:redis.properties</value>
         </property>

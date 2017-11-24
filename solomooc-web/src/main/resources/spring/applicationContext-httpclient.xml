@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:p="http://www.springframework.org/schema/p"
+
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
-	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+http://www.springframework.org/schema/p ">
 
     <!-- 定义httpclient连接池 -->
     <bean id="httpClientConnectionManager" class="org.apache.http.impl.conn.PoolingHttpClientConnectionManager"
@@ -28,7 +29,7 @@
     <bean id="httpClient" factory-bean="httpClientBuilder" factory-method="build"/>
 
     <!-- 定期清理无效的连接 -->
-    <bean class="com.jt.common.util.IdleConnectionEvictor" destroy-method="shutdown">
+    <bean class="com.solomooc.common.util.IdleConnectionEvictor" destroy-method="shutdown">
         <constructor-arg index="0" ref="httpClientConnectionManager"/>
         <!-- 间隔一分钟清理一次 -->
         <constructor-arg index="1" value="60000"/>

@@ -1,0 +1,1 @@
+<c:set var="slm" value="${pageContext.request.contextPath}"/>

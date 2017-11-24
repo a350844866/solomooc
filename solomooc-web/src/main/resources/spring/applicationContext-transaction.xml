@@ -1,5 +1,5 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
@@ -33,7 +33,7 @@
 
     <aop:config>
         <!-- 定义切面，所有的service的所有方法 -->
-        <aop:pointcut id="txPointcut" expression="execution(* com.jt.jsoup.service.*.*(..))"/>
+        <aop:pointcut id="txPointcut" expression="execution(* com.solomooc.jsoup.service.*.*(..))"/>
         <!-- 应用事务策略到Service切面 -->
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
     </aop:config>

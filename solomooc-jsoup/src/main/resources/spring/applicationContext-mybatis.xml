@@ -22,7 +22,7 @@
     <!-- 定义Mapper接口扫描器 为mapper接口创建代理对象 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 扫描mapper包 -->
-        <property name="basePackage" value="com.jt.jsoup.mapper"/>
+        <property name="basePackage" value="com.solomooc.jsoup.mapper"/>
     </bean>
 
 </beans>
